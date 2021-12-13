@@ -11,6 +11,7 @@ namespace Ejogos
 {
     public class Program
     {
+        //comentario para testar implatancao
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
