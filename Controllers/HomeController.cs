@@ -28,7 +28,10 @@ namespace Ejogos.Controllers
             return View();
         }
 
-        
+        public IActionResult Equipe()
+        {
+            return View();
+        }
 
     }
 }
