@@ -4,7 +4,7 @@ namespace Ejogos.Models
 {
     public class EjogosBase
     {
-        string path = '/database/jogos.csv';
+        string path = "/database/jogos.csv";
         public void CreateFolderAndFile( string path)
         {
 
@@ -17,7 +17,7 @@ namespace Ejogos.Models
             
             }
 
-            if (!File.Exists(path){
+            if (!File.Exists(path)){
                 File.Create(path);
             }
 
