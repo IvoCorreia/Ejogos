@@ -11,9 +11,7 @@ namespace Ejogos.Controllers
         {
 
             ViewBag.Equipes = equipeModel.ReadAll();
-
-
-            
+                      
 
             return View();
      
