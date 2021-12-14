@@ -1,4 +1,5 @@
 ﻿using Ejogos.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ejogos.Controllers
@@ -15,6 +16,26 @@ namespace Ejogos.Controllers
             
 
             return View();
+     
         }
+        public IActionResult Cadastrar(IFormCollection form)                   {
+
+            Equipe nova_equipe = new Equipe();
+            nova_equipe.IdEquipe = int.Parse(form["id"]);
+            nova_equipe.Nome = (form["nome"]);
+            nova_equipe.Imagem = (form["imagem"]);
+            /*
+                        nova_equipe.
+            */
+            
+            equipeModel.Create(nova_equipe);
+
+
+            ViewBag.Equipes = equipeModel.ReadAll();
+
+            return LocalRedirect("~/Equipe");
+
+        }
+
     }
 }

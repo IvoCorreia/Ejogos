@@ -6,9 +6,10 @@ namespace Ejogos.Models
 {
     public class Equipe : EjogosBase, IEquipe
     {
-        int IdEquipe { get; set; }
-        string Nome { get; set; }
-        string Imagem { get; set; }
+        public int IdEquipe { get; set; }
+        public string Nome { get; set; }
+        public string Imagem { get; set; }
+
         private const string path = "Database/Equipe.csv";
         public Equipe()
         {
@@ -42,7 +43,7 @@ namespace Ejogos.Models
         }
 
 
-        void IEquipe.Create(Equipe e)
+        public void Create(Equipe e)
         {
             string[] linha = { Prepare(e) };
             File.AppendAllLines(path, linha);
